@@ -12,21 +12,21 @@ export const decrement = createAction(DECREMENT);
 export type CounterAction = ReturnType<typeof increment>;
 
 export interface ICounter {
-	count: number;
+  count: number;
 }
 
 const initialState: ICounter = {
-	count: 0
+  count: 0
 };
 
 export default handleActions<ICounter, CounterAction>(
-	{
-		[INCREMENT]: (state, action) => {
-			return { count: state.count + 1 };
-		},
-		[DECREMENT]: (state, action) => {
-			return { count: state.count - 1 };
-		}
-	},
-	initialState
+  {
+    [INCREMENT]: (state, action) => {
+      return { count: state.count + 1 };
+    },
+    [DECREMENT]: (state, action) => {
+      return { count: state.count - 1 };
+    }
+  },
+  initialState
 );
