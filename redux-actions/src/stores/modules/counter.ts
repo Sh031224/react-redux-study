@@ -9,7 +9,7 @@ export const DECREMENT = "counter/DECREMENT" as const;
 export const increment = createAction(INCREMENT);
 export const decrement = createAction(DECREMENT);
 
-export type CounterAction = ReturnType<typeof increment>;
+export type CounterAction = ReturnType<typeof increment | typeof decrement>;
 
 export interface ICounter {
   count: number;
